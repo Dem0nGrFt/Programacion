@@ -17,21 +17,35 @@ public class MultipleOfFive {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int a = 1;
+        int a = 100;
         int b = 30;
         int suma = 0;
+        int temp;
 
-        if (a > b) {
-            System.out.println("Valores no validos");
+        if (a < 0 || b < 0) {
+            System.out.println("Los numeros deben ser positivos");
         } else {
 
-            for (int i = a; i <= b; i++) {
-                if (i % 5 == 0) {
-                    suma += i;
+            if (a > b) {
+                temp = a;
+                a = b;
+                b = temp;
+                for (int i = a; i <= b; i++) {
+                    if (i % 5 == 0) {
+                        suma += i;
+                    }
                 }
-            }
+                System.out.println("La suma de los múltiplos de 5 entre " + a + " y " + b + " es: " + suma);
+            } else {
 
-            System.out.println("La suma de los múltiplos de 5 entre " + a + " y " + b + " es: " + suma);
+                for (int i = a; i <= b; i++) {
+                    if (i % 5 == 0) {
+                        suma += i;
+                    }
+                }
+
+                System.out.println("La suma de los múltiplos de 5 entre " + a + " y " + b + " es: " + suma);
+            }
         }
     }
 }
