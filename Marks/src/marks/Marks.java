@@ -47,7 +47,7 @@ public class Marks {
     /**
      * Rellena las notas con datos
      */
-    private void fillMarks() {
+    public void fillMarks() {
         Scanner scan = new Scanner(System.in);
 
         for (int i = 0; i < numbers.length; i++) {
@@ -62,7 +62,7 @@ public class Marks {
      *
      * @return la media de las notas
      */
-    private double getAverage() {
+    public double getAverage() {
 
         double plus = 0;
 
