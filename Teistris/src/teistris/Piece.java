@@ -43,7 +43,7 @@ public class Piece {
 
         a = new Square(Game.MAX_X / 2 - Game.SQUARE_SIDE, 0, Color.BLUE, game);
         b = new Square(Game.MAX_X / 2, 0, Color.BLUE, game);
-        c = new Square(Game.MAX_X / 2 - Game.SQUARE_SIDE, Game.SQUARE_SIDE, 
+        c = new Square(Game.MAX_X / 2 - Game.SQUARE_SIDE, Game.SQUARE_SIDE,
                 Color.BLUE, game);
         d = new Square(Game.MAX_X / 2, Game.SQUARE_SIDE, Color.BLUE, game);
     }
@@ -64,7 +64,7 @@ public class Piece {
      * @return true se o movemento da ficha é posible, se non false
      */
     public boolean moveLeft() {
-
+        
         return true;
     }
 

@@ -18,6 +18,7 @@ package teistris;
 
 /**
  * Clase que implementa o comportamento do xogo do Tetris
+ *
  * @author Profe de Programación
  */
 public class Game {
@@ -30,6 +31,10 @@ public class Game {
      * Constante que define o valor máximo da coordenada x no panel de cadrados
      */
     public final static int MAX_X = 160;
+    /**
+     * Constante que define o valor máximo da coordenada y no panel de cadrados
+     */
+    public final static int MAX_Y = 200;
 
     /**
      * Referenza á peza actual do xogo, que é a única que se pode mover
@@ -95,6 +100,7 @@ public class Game {
 
     /**
      * Construtor da clase, que crea unha primeira peza
+     *
      * @param mainWindow Referenza á ventá principal do xogo
      */
     public Game(MainWindow mainWindow) {
@@ -130,9 +136,9 @@ public class Game {
     }
 
     /**
-     * Move a peza actual abaixo, se o xogo non está pausado Se a peza choca
-     * con algo e xa non pode baixar, pasa a formar parte do chan e créase unha
-     * nova peza
+     * Move a peza actual abaixo, se o xogo non está pausado Se a peza choca con
+     * algo e xa non pode baixar, pasa a formar parte do chan e créase unha nova
+     * peza
      */
     public void movePieceDown() {
         if ((!paused) && (!currentPiece.moveDown())) {
@@ -152,7 +158,7 @@ public class Game {
      * @return true se esa posición é válida, se non false
      */
     public boolean isValidPosition(int x, int y) {
-        if ((x == MAX_X) || (x < 0) || (y == 200)) {
+        if ((x == MAX_X) || (x < 0) || (y == MAX_Y)) {
             return false;
         }
         return true;
@@ -162,6 +168,7 @@ public class Game {
      * Crea unha nova peza e a establece como peza actual do xogo
      */
     private void createNewPiece() {
+        Piece piece = new Piece(this);
     }
 
     /**
