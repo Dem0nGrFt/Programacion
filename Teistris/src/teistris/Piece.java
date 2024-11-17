@@ -64,7 +64,7 @@ public class Piece {
      * @return true se o movemento da ficha é posible, se non false
      */
     public boolean moveLeft() {
-        
+
         return true;
     }
 
