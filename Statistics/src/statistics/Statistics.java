@@ -15,23 +15,45 @@ public class Statistics {
     private int arrayLength;
     private int numbers[];
 
+    /**
+     * Consigue el valor para el tamaño del array
+     *
+     * @return tamaño del array
+     */
     public int getArrayLength() {
         return arrayLength;
     }
 
+    /**
+     * Cambia el valor para el tamaño del array
+     *
+     * @param arrayLength tamaño del array
+     */
     public void setArrayLength(int arrayLength) {
         this.arrayLength = arrayLength;
     }
 
+    /**
+     * Consigue el valor de los numeros
+     *
+     * @return el valor de los numeros
+     */
     public int[] getNumbers() {
         return numbers;
     }
 
+    /**
+     * Cambia el valor de los numeros
+     *
+     * @param numbers valor para los numeros
+     */
     public void setNumbers(int[] numbers) {
         this.numbers = numbers;
     }
 
     /**
+     * Inicia la ejecucion
+     *
      * @param args the command line arguments
      */
     public static void main(String[] args) {
@@ -42,6 +64,9 @@ public class Statistics {
         stat.median();
     }
 
+    /**
+     * Introduce el valor del array (impar)
+     */
     public void fillArrayLength() {
         Scanner scan = new Scanner(System.in);
 
@@ -56,6 +81,9 @@ public class Statistics {
 
     }
 
+    /**
+     * Introduce los valores para los numeros
+     */
     public void fillNumbers() {
         Scanner scan = new Scanner(System.in);
 
@@ -66,6 +94,11 @@ public class Statistics {
         }
     }
 
+    /**
+     * Calcula la mediana de los numeros de un array
+     *
+     * @return valor para la mediana
+     */
     public int median() {
 
         for (int i = 0; i < numbers.length; i++) {
@@ -84,10 +117,7 @@ public class Statistics {
                 }
             }
 
-            System.out.println("hay " + biggers + " elementos mayores que el que esta en " + i);
-            System.out.println("hay " + smallers + " elementos menores que el que esta en " + i);
-
-            if (biggers >= numbers.length/2 && smallers >= numbers.length/2) {
+            if (biggers >= numbers.length / 2 && smallers >= numbers.length / 2) {
                 System.out.println(numbers[i] + " es la mediana.");
             }
         }
