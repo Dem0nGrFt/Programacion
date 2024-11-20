@@ -85,6 +85,24 @@ public class Matrix {
 
         return res;
     }
+    
+    /**
+     * resta los valores de 2 matrices
+     *
+     * @param b segunda matriz a restar
+     * @return resta de las 2 matrices
+     */
+    public Matrix subtract(Matrix b) {
+        Matrix res = new Matrix();
+
+        for (int i = 0; i < ROWS; i++) {
+            for (int j = 0; j < COLUMNS; j++) {
+                res.getMatrix()[i][j] = matrix[i][j] - b.getMatrix()[i][j];
+            }
+        }
+
+        return res;
+    }
 
     /**
      * Inicia la ejecucion
