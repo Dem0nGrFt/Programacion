@@ -24,10 +24,20 @@ public class AdventCalendar {
     public static final int COLUMNS = 4;
     private int calendar[][] = new int[ROWS][COLUMNS];
 
+    /**
+     * Consigue los valores de el calendario
+     *
+     * @return los valores de el calendario
+     */
     public int[][] getCalendar() {
         return calendar;
     }
 
+    /**
+     * Cambia los valores de el calendario
+     *
+     * @param calendar los valores de el calendario
+     */
     public void setCalendar(int[][] calendar) {
         this.calendar = calendar;
     }
@@ -41,7 +51,7 @@ public class AdventCalendar {
         adventcalendar.fill();
         adventcalendar.show();
 
-        for (int i = 0; i < MAX; i++) {
+        while (!adventcalendar.christmasIsHere()) {
             adventcalendar.eat();
             System.out.println();
             adventcalendar.show();
@@ -95,23 +105,43 @@ public class AdventCalendar {
 
     }
 
+    /**
+     * Cambia el menor valor de el calendario y lo pone a 0
+     */
     public void eat() {
         int min = Integer.MAX_VALUE;
+        int minRow = -1;
+        int minCol = -1;
 
         for (int i = 0; i < ROWS; i++) {
             for (int j = 0; j < COLUMNS; j++) {
-                if (calendar[i][j] != 0) {
-                    if (calendar[i][j] < min) {
-                        min = calendar[i][j];
-                    }
-                    if (calendar[i][j] == min) {
-                        calendar[i][j] = 0;
-
-                    }
+                if (calendar[i][j] != 0 && calendar[i][j] < min) {
+                    min = calendar[i][j];
+                    minRow = i;
+                    minCol = j;
                 }
             }
+        }
+        if (minRow != -1 && minCol != -1) {
+            calendar[minRow][minCol] = 0;
         }
 
     }
 
+    /**
+     * Verifica si el calendario esta vacio
+     *
+     * @return true si el calendario esta vacio
+     */
+    public boolean christmasIsHere() {
+        for (int i = 0; i < ROWS; i++) {
+            for (int j = 0; j < COLUMNS; j++) {
+                if (calendar[i][j] != 0) {
+                    return false;
+                }
+            }
+        }
+        System.out.println("¡Ya es Navidad!");
+        return true;
+    }
 }
