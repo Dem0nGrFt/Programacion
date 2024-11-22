@@ -4,6 +4,8 @@
  */
 package marks;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
 
 /**
@@ -13,23 +15,22 @@ import java.util.Scanner;
  */
 public class Marks {
 
-    private int[] numbers = new int[10];
+    private ArrayList<Integer> numbers = new ArrayList<>();
 
     /**
-     * Invoca el valor de las notas
-     *
-     * @return el valor de las notas
+     * Valor fijo de alumnos
      */
-    public int[] getNumbers() {
+    public static final int STUDENTS = 10;
+
+    /**
+     *
+     * @return
+     */
+    public ArrayList<Integer> getNumbers() {
         return numbers;
     }
 
-    /**
-     * Cambia los valores de las notas
-     *
-     * @param numbers valores para las notas
-     */
-    public void setNumbers(int[] numbers) {
+    public void setNumbers(ArrayList<Integer> numbers) {
         this.numbers = numbers;
     }
 
@@ -50,26 +51,24 @@ public class Marks {
     public void fillMarks() {
         Scanner scan = new Scanner(System.in);
 
-        for (int i = 0; i < numbers.length; i++) {
+        for (int i = 0; i < STUDENTS; i++) {
             System.out.println("Introduce un número:");
-            numbers[i] = scan.nextInt();
-
+            numbers.add(scan.nextInt());
         }
     }
 
     /**
-     * Calcula la media de las notas
+     * Calcula a media de las notas usando un iterador
      *
      * @return la media de las notas
      */
     public double getAverage() {
+        double sum = 0;
+        Iterator<Integer> iterator = numbers.iterator();
 
-        double plus = 0;
-
-        for (int number : numbers) {
-            plus += number;
+        while (iterator.hasNext()) {
+            sum += iterator.next();
         }
-        return plus /= numbers.length;
+        return sum / numbers.size();
     }
-
 }
