@@ -95,34 +95,80 @@ public class Statistics {
     }
 
     /**
-     * Calcula la mediana de los numeros de un array
+     * Imprime os valores dun array.
      *
-     * @return valor para la mediana
+     * @param array O array a imprimir
+     * @param message Mensaxe inicial para a impresión
+     */
+    private void printArray(int[] array, String message) {
+        System.out.print(message);
+        for (int num : array) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+
+    /**
+     * Calcula a mediana dos números dun array
+     *
+     * Ordenamento aleatorio. Este algoritmo verifica si el array esta ordenado.
+     * Si no lo esta, permuta repetida y aleatoriamente los valores hasta que lo
+     * este.
+     *
+     * @return valor para a mediana
      */
     public int median() {
 
-        for (int i = 0; i < numbers.length; i++) {
+        while (!isSorted(numbers)) {
 
-            int biggers = 0;
-            int smallers = 0;
-
-            for (int j = 0; j < numbers.length; j++) {
-                if (j != i) {
-                    if (numbers[j] >= numbers[i]) {
-                        biggers++;
-                    }
-                    if (numbers[j] <= numbers[i]) {
-                        smallers++;
-                    }
-                }
+            System.out.print("Permutacion generada: ");
+            for (int num : numbers) {
+                System.out.print(num + " ");
             }
+            System.out.println();
 
-            if (biggers >= numbers.length / 2 && smallers >= numbers.length / 2) {
-                System.out.println(numbers[i] + " es la mediana.");
-            }
+            shuffle(numbers);
         }
 
-        return 0;
+        System.out.print("Array ordenado: ");
+        for (int num : numbers) {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+
+        int medianIndex = numbers.length / 2;
+
+        System.out.println(numbers[medianIndex] + " é a mediana.");
+        return numbers[medianIndex];
+    }
+
+    /**
+     * Verifica si el array esta ordenado
+     *
+     * @param array el array a comprobar
+     * @return true si esta ordenado
+     */
+    private boolean isSorted(int[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            if (array[i] > array[i + 1]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Baraja o array
+     *
+     * @param array O array a barallar
+     */
+    private void shuffle(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            int randomIndex = (int) (Math.random() * array.length);
+            int temp = array[i];
+            array[i] = array[randomIndex];
+            array[randomIndex] = temp;
+        }
     }
 
 }

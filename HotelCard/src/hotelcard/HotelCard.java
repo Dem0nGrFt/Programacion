@@ -21,9 +21,8 @@ public class HotelCard {
         boolean retirCard = true;
         boolean famCard = true;
 
-        /*
-        Clasificador para saber lo que se paga en el hotel
-         */
+        
+        //Clasificador para saber lo que se paga en el hotel
         if (age < 30 || age > 55) {
             if (age < 30) {
                 if (univCard == true && unemploy == true) {
