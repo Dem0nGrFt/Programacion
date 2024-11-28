@@ -7,6 +7,7 @@ package primitiva;
 import java.util.Scanner;
 
 /**
+ * Clase que representa a un sorteo de la primitva
  *
  * @author aitor.martinezparente
  */
@@ -14,11 +15,11 @@ public class Primitiva {
 
     private int day, month, year;
 
-    private int winnerNumbers[] = new int[]{12, 18, 7, 46, 48, 27};
+    private int winnerNumbers[] = new int[6];
 
-    private int winnerComplement = 8;
+    private int winnerComplement;
 
-    private int refundNumber = 4;
+    private int refundNumber;
 
     /**
      * valor maximo de los numeros del boleto
@@ -108,36 +109,36 @@ public class Primitiva {
     }
 
     /**
-     * Consigue el valor del number complementario
+     * Consigue el valor del numero complementario
      *
-     * @return el valor del number complementario
+     * @return el valor del numero complementario
      */
     public int getWinnerComplement() {
         return winnerComplement;
     }
 
     /**
-     * Cambia el valor para el number complementario
+     * Cambia el valor para el numero complementario
      *
-     * @param winnerComplement el valor para el number complementario
+     * @param winnerComplement el valor para el numero complementario
      */
     public void setWinnerComplement(int winnerComplement) {
         this.winnerComplement = winnerComplement;
     }
 
     /**
-     * Consigue el valor del number reintegro
+     * Consigue el valor del numero reintegro
      *
-     * @return el valor del number reintegro
+     * @return el valor del numero reintegro
      */
     public int getRefundNumber() {
         return refundNumber;
     }
 
     /**
-     * Cambia el valor para el number reintegro
+     * Cambia el valor para el numero reintegro
      *
-     * @param refundNumber el valor para el number reintegro
+     * @param refundNumber el valor para el numero reintegro
      */
     public void setRefundNumber(int refundNumber) {
         this.refundNumber = refundNumber;
@@ -188,7 +189,7 @@ public class Primitiva {
         PrimitivaTicket ticket = new PrimitivaTicket(numbers, refund);
 
         for (int i = 0; i < numbers.length; i++) {
-            System.out.println("Introduce el numero " + i + " del boleto: ");
+            System.out.println("Introduce el numero " + (i + 1) + " del boleto: ");
             numbers[i] = (scan.nextInt());
         }
 
@@ -212,13 +213,12 @@ public class Primitiva {
                     break;
                 }
             }
-            
+
             if (number == winnerComplement) {
                 hitRefund = true;
                 break;
             }
         }
-
 
         // Mostrar el premio segun los aciertos
         if (hits == 6) {
@@ -237,6 +237,42 @@ public class Primitiva {
     }
 
     /**
+     * Rellena el boleto con valores aleatorios
+     */
+    public void makeDraw() {
+        for (int i = 0; i < winnerNumbers.length; i++) {
+            int value;
+            do {
+                value = new java.util.Random().nextInt(MAX_NUMBER) + 1;
+            } while (isIt(value));
+            winnerNumbers[i] = value;
+
+            do {
+                this.winnerComplement = new java.util.Random().nextInt(MAX_NUMBER) + 1;
+            } while (this.winnerComplement == value);
+
+        }
+
+        this.refundNumber = new java.util.Random().nextInt(MAX_REFUND_NUMBER) + 1;
+
+    }
+
+    /**
+     * Comprueba si esta introducido el numero a introducir
+     *
+     * @param b numero a comprobar
+     * @return true si esta introducido, false si no
+     */
+    private boolean isIt(int b) {
+        for (int i = 0; i < winnerNumbers.length; i++) {
+            if (b == winnerNumbers[i]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
      * Inicia la ejecucion
      *
      * @param args the command line arguments
@@ -244,6 +280,7 @@ public class Primitiva {
     public static void main(String[] args) {
         Primitiva primitiva = new Primitiva(21, 6, 2004);
 
+        primitiva.makeDraw();
         primitiva.show();
         primitiva.showPrize(primitiva.generateTicket());
 
