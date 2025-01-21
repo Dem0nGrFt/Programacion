@@ -4,11 +4,17 @@
  */
 package shapes;
 
+import java.awt.Color;
+
 /**
  *
  * @author aitor.martinezparente
  */
 public class Square extends Shape {
+
+    public Square(Color color) {
+        super(color);
+    }
     
     /**
      * borra la figura creada

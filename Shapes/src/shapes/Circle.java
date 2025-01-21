@@ -4,11 +4,17 @@
  */
 package shapes;
 
+import java.awt.Color;
+
 /**
  *
  * @author aitor.martinezparente
  */
 public class Circle extends Shape {
+
+    public Circle(Color color) {
+        super(color);
+    }
 
     /**
      * borra la figura creada

@@ -4,6 +4,8 @@
  */
 package shapes;
 
+import java.awt.Color;
+
 /**
  *
  * @author aitor.martinezparente
@@ -16,11 +18,11 @@ public class PaintingSession {
      */
     public static void main(String[] args) {
         
-        Shape square = new Square();
+        Shape square = new Square(Color.blue);
         
-        Shape triangle = new Triangle();
+        Shape triangle = new Triangle(Color.yellow);
         
-        Shape circle = new Circle();
+        Shape circle = new Circle(Color.red);
         
         Board board = new Board();
         

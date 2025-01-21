@@ -4,11 +4,17 @@
  */
 package shapes;
 
+import java.awt.Color;
+
 /**
  *
  * @author aitor.martinezparente
  */
 public class Triangle extends Shape {
+
+    public Triangle(Color color) {
+        super(color);
+    }
     
     /**
      * borra la figura creada
