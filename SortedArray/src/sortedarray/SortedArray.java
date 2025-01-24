@@ -5,6 +5,7 @@
 package sortedarray;
 
 import java.util.Scanner;
+import java.lang.Exception;
 
 /**
  *
@@ -49,12 +50,23 @@ public class SortedArray {
     /**
      * Muestra los valores del array
      */
-    public void show() {
+    public void show() throws ArrayIndexOutOfBoundsException {
+
+        /*
         System.out.print("Array ordenado: ");
         for (int num : array) {
             System.out.print(num + " ");
         }
         System.out.println();
+        */
+        // prueba try catch
+        try {
+            for (int i = 0; i < 100; i++) {
+                System.out.print(array[i] + " ");
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Error: el indice esta fuera del rango.");
+        }
     }
 
     /**

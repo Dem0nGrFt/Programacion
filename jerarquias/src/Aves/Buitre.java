@@ -10,4 +10,28 @@ package Aves;
  */
 public class Buitre extends Ave{
     
+    private int flightSpeed, weight;
+
+    public int getFlightSpeed() {
+        return flightSpeed;
+    }
+
+    public void setFlightSpeed(int flightSpeed) {
+        this.flightSpeed = flightSpeed;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public Buitre(int flightSpeed, int weight, char sex, int age) {
+        super(sex, age);
+        this.flightSpeed = flightSpeed;
+        this.weight = weight;
+    }
+    
 }

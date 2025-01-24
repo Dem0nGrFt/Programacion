@@ -10,4 +10,29 @@ package Aparatos;
  */
 public class Aparato {
     
+    private String comsumption;
+    
+    private int Price;
+
+    public String getComsumption() {
+        return comsumption;
+    }
+
+    public void setComsumption(String comsumption) {
+        this.comsumption = comsumption;
+    }
+
+    public int getPrice() {
+        return Price;
+    }
+
+    public void setPrice(int Price) {
+        this.Price = Price;
+    }
+
+    public Aparato(String comsumption, int Price) {
+        this.comsumption = comsumption;
+        this.Price = Price;
+    }
+    
 }
