@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package parimpargui;
+package notesslider;
 
 /**
  *
  * @author aitor.martinezparente
  */
-public class ParImparGUI extends javax.swing.JFrame {
+public class NotesSlider extends javax.swing.JFrame {
 
     /**
-     * Creates new form ParImparGUI
+     * Creates new form NotesSlider
      */
-    public ParImparGUI() {
+    public NotesSlider() {
         initComponents();
     }
 
@@ -27,59 +27,56 @@ public class ParImparGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jBttnPar = new javax.swing.JButton();
-        jBttnImpar = new javax.swing.JButton();
-        jCmbBx = new javax.swing.JComboBox<>();
+        jSliderNotes = new javax.swing.JSlider();
+        jLabelNotes = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(102, 153, 255));
+        jPanel1.setBackground(new java.awt.Color(0, 204, 102));
 
-        jBttnPar.setText("Pares");
-        jBttnPar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBttnParActionPerformed(evt);
+        jSliderNotes.setMajorTickSpacing(10);
+        jSliderNotes.setMinorTickSpacing(10);
+        jSliderNotes.setPaintLabels(true);
+        jSliderNotes.setPaintTicks(true);
+        jSliderNotes.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                jSliderNotesStateChanged(evt);
             }
         });
 
-        jBttnImpar.setText("Impares");
-        jBttnImpar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBttnImparActionPerformed(evt);
-            }
-        });
+        jLabelNotes.setForeground(new java.awt.Color(0, 0, 0));
+        jLabelNotes.setText("Nota");
 
-        jCmbBx.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jCmbBxActionPerformed(evt);
-            }
-        });
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Nota:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(74, 74, 74)
-                .addComponent(jBttnPar)
-                .addGap(79, 79, 79)
-                .addComponent(jBttnImpar)
-                .addContainerGap(63, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jCmbBx, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(125, 125, 125))
+                .addContainerGap(28, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jSliderNotes, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelNotes)
+                        .addGap(184, 184, 184))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jCmbBx, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                .addGap(58, 58, 58)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBttnPar)
-                    .addComponent(jBttnImpar))
-                .addGap(41, 41, 41))
+                    .addComponent(jLabelNotes)
+                    .addComponent(jLabel1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 82, Short.MAX_VALUE)
+                .addComponent(jSliderNotes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(96, 96, 96))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -96,23 +93,10 @@ public class ParImparGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jBttnParActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBttnParActionPerformed
-        jCmbBx.removeAllItems();
-        for (int i = 0; i < 101; i+=2) {
-            jCmbBx.addItem(String.valueOf(i));
-        }
-    }//GEN-LAST:event_jBttnParActionPerformed
-
-    private void jBttnImparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBttnImparActionPerformed
-        jCmbBx.removeAllItems();
-        for (int i = 1; i < 101; i+=2) {
-            jCmbBx.addItem(String.valueOf(i));
-        }
-    }//GEN-LAST:event_jBttnImparActionPerformed
-
-    private void jCmbBxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCmbBxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jCmbBxActionPerformed
+    private void jSliderNotesStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jSliderNotesStateChanged
+        int x = jSliderNotes.getValue();
+        jLabelNotes.setText(Double.toString((double)x/10));
+    }//GEN-LAST:event_jSliderNotesStateChanged
 
     /**
      * @param args the command line arguments
@@ -131,28 +115,28 @@ public class ParImparGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ParImparGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NotesSlider.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ParImparGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NotesSlider.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ParImparGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NotesSlider.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ParImparGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NotesSlider.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new ParImparGUI().setVisible(true);
+                new NotesSlider().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBttnImpar;
-    private javax.swing.JButton jBttnPar;
-    private javax.swing.JComboBox<String> jCmbBx;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabelNotes;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSlider jSliderNotes;
     // End of variables declaration//GEN-END:variables
 }
