@@ -17,7 +17,7 @@ public class Ascensor {
 
         char action = 'p';
 
-        // ascensor que haceuna funcion segun la letra de action
+        // ascensor que hace una funcion segun la letra de accion
         switch (action) {
             case 'a':
                 System.out.println("Abrir");

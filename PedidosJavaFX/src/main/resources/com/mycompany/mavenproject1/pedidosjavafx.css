@@ -1,0 +1,42 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 8 abr 2025, 12:18:36
+    Author     : aitor.martinezparente
+*/
+
+Button {
+    -fx-background-color: #00cc99;
+    -fx-border-color: #FFFFFF;
+    -fx-border-width: 2;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Times New Roman";
+    -fx-font-style: italic;
+    -fx-font-size: 20px;
+    -fx-background-radius: 10 10 10 10;
+    -fx-border-radius: 10 10 10 10;
+}
+
+TextField{
+    -fx-background-color: #ccccff;
+
+}
+
+Button:hover {
+    -fx-background-color: #333333;
+    -fx-font-size: 22px;
+}
+
+#fondo {
+    -fx-background-color: #008287;
+}
+
+.botonVermello {
+    -fx-background-color: #009966;
+}
+
+.totalestilo{
+    -fx-background-color: #9999ff;
+}
