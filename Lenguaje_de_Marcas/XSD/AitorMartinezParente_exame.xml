@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recetas xmlns:xs=http:"//www.w3.org/2001/XMLSchema" xsi:noNamespaceSchemaLocation="AitorMartinezParente_exame.xsd">
+    <receta codigo="1" tiempoRealizacion="200">
+        <nombre> Tacos </nombre>
+        <ingredientes raciones="2">
+            <ingrediente cantidad="1.0" unidades="gramos"> Tomate </ingrediente>
+        </ingredientes>
+        <realizacion>
+            <paso>Mete la carne en la tortilla</paso>
+        </realizacion>
+    </receta>
+
+    <realizadas>
+        <receta codigo="1" fecha="2024-12-2"/>
+    </realizadas>
+
+    <receta codigo="2" tiempoRealizacion="150">
+        <nombre> Pizza </nombre>
+        <ingredientes raciones="1">
+            <ingrediente cantidad="5.0" unidades="vasos"> Agua </ingrediente>
+        </ingredientes>
+        <realizacion>
+            <paso>Junta la masa y el agua para amasar</paso>
+            <paso>Meter al horno despues de añadir los ingredientes</paso>
+        </realizacion>
+    </receta>
+
+    <realizadas>
+        <receta codigo="2" fecha="2024-11-21"/>
+    </realizadas>
+</recetas>

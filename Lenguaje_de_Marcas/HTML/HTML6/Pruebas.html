@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <form action="/registrardatos.php" method="post">
+        Nombre:
+        <input type="text" name="nombre" size="20" /><br /><br />
+        Edad:
+        <input type="text" name="edad" size="20" /><br /><br />
+        <input type="submit" value="enviar" />
+    </form>
+    <br /><br />
+
+    <form method="post">
+        Ingrese su mail:
+        <input type="text" name="nombre" id="nombre" size="20" /><br />
+        Ingrese su clave:
+        <input type="password" name="clave" id="clave" size="12" /><br />
+        Repita el ingreso su clave:
+        <input type="password" name="clave2" id="clave2" size="12" /><br />
+        <input type="submit" value="enviar" />
+        <input type="reset" value="borrar" />
+    </form>
+    <br /><br />
+
+    <form>
+        Ingrese su mail:
+        <input type="text" name="mail" id="mail" size="20" /><br />
+        Ingrese su clave:
+        <input type="password" name="clave" id="clave" size="12" /><br />
+        Seleccione las peliculas a pedir: <br />
+        <input type="checkbox" name="bat-y-rob" value="bat-y-rob" />
+        Batman y Robin<br />
+        <input type="checkbox" name="super" value="super" />
+        Superman Regresa<br />
+        <input type="checkbox" name="miedo" value="miedo" />
+        Una pelicula de miedo<br />
+        <input type="checkbox" name="sin-fin" value="sin-fin" />
+        La historia sin fin<br />
+        <input type="submit" value="Enviar" />
+    </form>
+    <br /><br />
+
+    <form>
+        Ingrese su nombre:
+        <input type="text" name="nombre" id="nombre" size="20" /><br />
+        Que sistema operativo utiliza mas? <br />
+        <input type="radio" name="estudios" value="1" />Windows<br />
+        <input type="radio" name="estudios" value="2" />Linux<br />
+        <input type="submit" name="enviar" /><br />
+    </form>
+    <br /><br />
+
+    <form action="registrardatos.php" method="post">
+        Nombre:
+        <input type="text" name="nombre" id="nombre" size="20" />
+        <br /><br />
+        <input type="button" onclick="javascript:alert('hola '+document.getElementById('nombre').value);"
+            value="Mostrar Saludo" />
+    </form>
+    <br /><br />
+
+    <form action="registrardatos.php" method="post">
+        <h1>Cual es la velocidad de la luz?</h1>
+        300000Km/s
+        <input type="button" onclick="javascript:alert('Correcta!!');" value="Correcta?" />
+        <br />
+        200000Km/s
+        <input type="button" onclick="javascript:alert('Incorrecta!!');" value="Correcta?" />
+        <br />
+        100000Km/s
+        <input type="button" onclick="javascript:alert('Incorrecta!!');" value="Correcta?" />
+    </form>
+    <br /><br />
+
+    <form action="../../form-result.php" method="post" enctype="multipart/form-data">
+        Sube un archivo:
+        <input type="file" name="archivosubido" />
+        <br />
+        <input type="submit" value="Enviar datos" />
+    </form>
+    <br /><br />
+
+    <form>
+        <label for="titulo">Blog de HTML</label>
+        <input type="text" id="titulo" name="titulo" size="30" value="Cómo utilizar el control hidden" /><br />
+        <br />
+        <label for="contenido">Contenido del artículo:</label><br />
+        <textarea id="contenido" name="contenido" cols="60" rows="5">
+        El control input hidden permite tener contenidos
+        ocultos al usuario pero accesibles a JavaScript
+        </textarea><br /><br />
+        <button type="submit">Actualizar artículo</button>
+        <input type="hidden" id="actId" name="artId" value="5643" />
+    </form>
+    <br /><br />
+
+    <h2>Formulario</h2>
+    <form action="../../form-result.php" method="get" target="_blank">
+        <p>Usuario: <input type="text" name="usuario" /></p>
+        <p>Contraseña: <input type="password" name="pass" /></p>
+        <p>
+            <input type="image" name="botondeenvio" src="icono.png" alt="Enviar formulario" />
+        </p>
+    </form><br><br>
+
+    <form action="scripts/registrardatos.php" method="post">
+        Ingrese su nombre:
+        <input type="text" name="nombre" size="30"><br />
+        Ingrese su mail:
+        <input type="text" name="mail" size="50"><br />
+        Ingrese su dni:
+        <input type="text" name="dni" size="9"><br />
+        Ingrese su Curriculum:<br />
+        <textarea name="comentarios" rows="8" cols="60"></textarea>
+        <br /><input type="submit" value="Enviar">
+    </form><br><br>
+
+    <form action="/registrardatos.php" method="post">
+        Introduzca su nombre:
+        <input type="text" name="nombre" size="30"><br />
+        Seleccione su pais:
+        <select name="pais">
+            <option value="1">Argentina</option>
+            <option value="2" selected>España</option>
+            <option value="3">México</option>
+            <option value="4">Guatemala</option>
+            <option value="5">Honduras</option>
+            <option value="7">El Salvador</option>
+            <option value="8">Venezuela</option>
+            <option value="9">Colombia</option>
+            <option value="10">Cuba</option>
+            <option value="11">Bolivia</option>
+            <option value="13">Perú</option>
+        </select><br />
+        <input type="submit" value="Enviar">
+    </form><br><br>
+
+    <form action="/registrardatos.php" method="post">
+        Seleccione uno o varios emails (Presione Ctrl para seleccionar varios emails)<br />
+        <select name="emails[]" size="4" multiple>
+            <option value="1">pacoweb@gmail.com</option>
+            <option value="2">pacoweb@hotmail.com</option>
+            <option value="3">pacoweb@yahoo.com</option>
+            <option value="4">pacoweb@thunderbird.com</option>
+            <option value="5">pacoweb@mozilla.com</option>
+        </select><br />
+        <input type="submit" value="Enviar">
+    </form><br><br>
+
+    <form action="registrardatos.php" method="post"> Nombre:
+        <input type="text" name="nombre" size="20"><br /><br /><br />
+        <button type="submit">Enviar
+            <img src="icono.png"></button>
+        <button type="reset">Borrar
+            <img src="icono.png"></button>
+    </form><br><br>
+
+    <form action="/registrardatos.php" method="post">
+        Nombre de usuario:
+        <input type="text" name="nombre" size="20" /><br /><br />
+        Clave:
+        <input type="password" name="pass" size="20" /><br /><br />
+        <button type="submit">Ingreso al <br> sitio <br>
+            <img src="icono.png"></button>
+    </form><br><br>
+
+    <form action="mailto:pizzasricas@gmail.com?subject= Orden de Pizzas" method="post" enctype="text/plain">
+        Seleccione tipo y cantidad de pizzas <br><br>
+        Pizza:
+        <select name="pizza">
+            <option value="Margarita">Margarita</option>
+            <option value="Peperoni">Peperoni</option>
+            <option value="Capricciosa">Capricciosa</option>
+            <option value="BBQ">BBQ</option>
+        </select>
+        Cantidad:
+        <select name="cant">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select><br>
+        Pizza:
+        <select name="pizza">
+            <option value="Margarita">Margarita</option>
+            <option value="Peperoni">Peperoni</option>
+            <option value="Capricciosa">Capricciosa</option>
+            <option value="BBQ">BBQ</option>
+        </select>
+        Cantidad:
+        <select name="cant">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select><br>
+        Pizza:
+        <select name="pizza">
+            <option value="Margarita">Margarita</option>
+            <option value="Peperoni">Peperoni</option>
+            <option value="Capricciosa">Capricciosa</option>
+            <option value="BBQ">BBQ</option>
+        </select>
+        Cantidad:
+        <select name="cant">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select><br><br>
+        Datos <br><br>
+        Nombre:
+        <input type="text" name="nombre" size="30"><br />
+        Direccion:
+        <input type="text" name="direccion" size="30"><br />
+        Telefono:
+        <input type="text" name="tlfn" size="15"><br />
+        <input type="submit" value="enviar">
+    </form>
+
+    <!--Vas en la pagina 16 del doc o 19 del pdf--> 
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="examen.xsd">
+    <book id="B001" availability="Available">
+        <title>Effective Java</title>
+        <author firstName="Joshua" lastName="Bloch"/>
+        <year>2008</year>
+        <genre>Non-Fiction</genre>
+        <rating>4.8</rating>
+    </book>
+    <book id="B002" availability="Checked Out">
+        <title>Harry Potter and the Philosopher's Stone</title>
+        <author firstName="J.K." lastName="Rowling"/>
+        <year>1997</year>
+        <genre>Fantasy</genre>
+        <rating>4.9</rating>
+    </book>
+    <book id="B003" availability="Available">
+        <title>Brief Answers to the Big Questions</title>
+        <author firstName="Stephen" lastName="Hawking"/>
+        <year>2018</year>
+        <genre>Science</genre>
+        <rating>4.5</rating>
+    </book>
+    <staff>
+        <member id="M001" role="Librarian">
+            <name>John Doe</name>
+        </member>
+        <member id="M002" role="Assistant">
+            <name>Jane Smith</name>
+        </member>
+        <member id="M003" role="Volunteer">
+            <name>Emily Johnson</name>
+        </member>
+    </staff>
+</library>

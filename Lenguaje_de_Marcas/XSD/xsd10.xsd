@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definición del tipo para compositores -->
+    <xs:complexType name="CompositoresType">
+        <xs:sequence>
+            <xs:element name="compositor" type="xs:string" minOccurs="1" maxOccurs="5" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definición del tipo para productores -->
+    <xs:complexType name="ProductoresType">
+        <xs:sequence>
+            <xs:element name="productor" type="xs:string" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definición del tipo para el artista -->
+    <xs:complexType name="ArtistaType">
+        <xs:sequence>
+            <xs:element name="artista" type="xs:string" />
+        </xs:sequence>
+        <xs:attribute name="pais_origen" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <!-- Definición del tipo para canción -->
+    <xs:complexType name="CancionType">
+        <xs:all>
+            <xs:element name="titulo" type="xs:string" />
+            <xs:element name="compositores" type="CompositoresType" />
+            <xs:element name="productores" type="ProductoresType" />
+            <xs:element name="sello" type="xs:string" />
+            <xs:element name="artista" type="ArtistaType" />
+            <xs:element name="publicada">
+                <xs:complexType>
+                    <xs:attribute name="estado" type="xs:string" use="required" />
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+        <xs:attribute name="duracion" type="xs:time" use="required" />
+        <xs:attribute name="annio" type="xs:int" use="required" />
+    </xs:complexType>
+
+    <!-- Definición del elemento raíz -->
+    <xs:element name="canciones">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cancion" type="CancionType" maxOccurs="unbounded" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

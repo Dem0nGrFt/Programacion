@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="biblioteca.xsl"?>
+<biblioteca>
+    <autores>
+        <autor>
+            <nombre>J.R.R. Tolkien</nombre>
+            <libros>
+                <libro>
+                    <titulo>El Señor de los Anillos</titulo>
+                    <genero>Fantasía</genero>
+                    <precio>20</precio>
+                </libro>
+                <libro>
+                    <titulo>El Hobbit</titulo>
+                    <genero>Fantasía</genero>
+                    <precio>15</precio>
+                </libro>
+            </libros>
+        </autor>
+        <autor>
+            <nombre>Gabriel García Márquez</nombre>
+            <libros>
+                <libro>
+                    <titulo>Cien años de soledad</titulo>
+                    <genero>Realismo mágico</genero>
+                    <precio>18</precio>
+                </libro>
+                <libro>
+                    <titulo>Crónica de una muerte anunciada</titulo>
+                    <genero>Ficción</genero>
+                    <precio>14</precio>
+                </libro>
+            </libros>
+        </autor>
+        <!-- Otros autores y libros -->
+    </autores>
+</biblioteca>

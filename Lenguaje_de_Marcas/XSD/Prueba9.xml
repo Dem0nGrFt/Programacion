@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="xsd9.xsd">
+
+    <libro>
+        <titulo>O Quixote</titulo>
+        <autor>Miguel de Cervantes</autor>
+        <editorial>Editorial Clásicos</editorial>
+    </libro>
+
+    <libro>
+        <autor>Jane Austen</autor>
+        <titulo>Orgullo e Prexuízo</titulo>
+        <editorial>Editorial Británica</editorial>
+    </libro>
+
+    <libro>
+        <editorial>Editorial Novas</editorial>
+        <titulo>Contos Galegos</titulo>
+        <autor>Rosalía de Castro</autor>
+    </libro>
+
+</biblioteca>

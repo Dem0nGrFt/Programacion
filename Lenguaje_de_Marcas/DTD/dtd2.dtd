@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT aviso (titulo?, (parrafo+, grafico)*, (comentario|resumen))>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT parrafo (#PCDATA)>
+<!ELEMENT grafico (#PCDATA)>
+<!ELEMENT comentario (#PCDATA)>
+<!ELEMENT resumen (#PCDATA)>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definir a estrutura para o medio de transporte con choice -->
+    <xs:complexType name="TransportType">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element name="moto" type="xs:string" />
+                <xs:element name="coche" type="xs:string" />
+                <xs:element name="tren" type="xs:string" />
+                <xs:element name="avion" type="xs:string" />
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definir a estrutura para un viaxe -->
+    <xs:complexType name="ViaxeType">
+        <xs:sequence>
+            <xs:element name="data" type="xs:date" />
+            <xs:element name="kilometros" type="xs:int" />
+            <xs:element name="medioTransporte" type="TransportType" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definir o elemento raíz que contén as viaxes -->
+    <xs:element name="viaxes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="viaxe" maxOccurs="unbounded" type="ViaxeType" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

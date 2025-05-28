@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" 
+         xs:noNamespaceSchemaLocation="xsd13.xsd">
+
+    <!-- Definición de libros -->
+    <book identifier="book1">
+        <isbn>978-3-16-148410-0</isbn>
+        <title>The Great Gatsby</title>
+        <author-ref ref="author1" />
+    </book>
+    <book identifier="book2">
+        <isbn>978-0-14-118263-6</isbn>
+        <title>1984</title>
+        <author-ref ref="author2" />
+    </book>
+    <book identifier="book3">
+        <isbn>978-1-56619-909-4</isbn>
+        <title>To Kill a Mockingbird</title>
+        <author-ref ref="author3" />
+    </book>
+    <book identifier="book4">
+        <isbn>978-0-452-28423-4</isbn>
+        <title>Brave New World</title>
+        <author-ref ref="author4" />
+    </book>
+    
+        <!-- Definición de autores -->
+        <author id="author1">F. Scott Fitzgerald</author>
+        <author id="author2">George Orwell</author>
+        <author id="author3">Harper Lee</author>
+        <author id="author4">Aldous Huxley</author>
+    
+</library>

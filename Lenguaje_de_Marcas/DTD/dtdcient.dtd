@@ -1,0 +1,8 @@
+<!ELEMENT rede (cientifico+)>
+<!ELEMENT cientifico (nome, colaboradores)>
+<!ATTLIST cientifico ide ID #REQUIRED>
+
+<!ELEMENT nome (#PCDATA)>
+<!ELEMENT colaboradores (colaborador+)>
+<!ELEMENT colaborador EMPTY>
+<!ATTLIST colaborador idref IDREF #REQUIRED>

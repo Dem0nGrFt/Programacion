@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cd SYSTEM "dtdz.dtd">
+<cd titulo="Greatest Hits">
+    <canciones>
+      <cancion duracion="4:47" anio="2008">
+        <titulo>Give it 2 me</titulo>
+        <compositores>
+          <compositor>
+            <nombres>Pharrell</nombres>
+            <apellidos>Williams</apellidos>
+          </compositor>
+        </compositores>
+        <productores>
+          <productor>
+            <nombres>Pharrell</nombres>
+            <apellidos>Williams</apellidos>
+          </productor>
+        </productores>
+        <sello>Warner Bros. Records</sello>
+        <artista>Madonna</artista>
+      </cancion>
+      <!-- Máis cancións poden ir aquí -->
+    </canciones>
+  </cd>
+  

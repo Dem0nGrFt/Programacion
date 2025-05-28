@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<viaxes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="xsd8.xsd">
+
+    <viaxe>
+        <data>2024-11-10</data>
+        <kilometros>150</kilometros>
+        <medioTransporte>
+            <moto />
+        </medioTransporte>
+    </viaxe>
+
+    <viaxe>
+        <data>2024-11-15</data>
+        <kilometros>200</kilometros>
+        <medioTransporte>
+            <coche />
+        </medioTransporte>
+    </viaxe>
+
+    <viaxe>
+        <data>2024-11-18</data>
+        <kilometros>1200</kilometros>
+        <medioTransporte>
+            <tren />
+        </medioTransporte>
+    </viaxe>
+
+    <viaxe>
+        <data>2024-11-20</data>
+        <kilometros>3000</kilometros>
+        <medioTransporte>
+            <avion />
+        </medioTransporte>
+    </viaxe>
+
+</viaxes>

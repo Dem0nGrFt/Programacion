@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<filteredBookstore>
+  <filteredBook author="Andrew Hunt" year="1999" price="42.95">
+    <title lang="en">The Pragmatic Programmer</title>
+    <genre>Technology</genre>
+    <publisher>Addison-Wesley</publisher>
+  </filteredBook>
+  <filteredBook author="Erik T. Ray" year="2003" price="39.95">
+    <title lang="en">Learning XML</title>
+    <genre>Technology</genre>
+    <publisher>O'Reilly Media</publisher>
+  </filteredBook>
+  <filteredBook author="Joshua Bloch" year="2008" price="55.00">
+    <title lang="en">Effective Java</title>
+    <genre>Technology</genre>
+    <publisher>Addison-Wesley</publisher>
+  </filteredBook>
+  <filteredBook author="Robert C. Martin" year="2008" price="49.99">
+    <title lang="en">Clean Code</title>
+    <genre>Technology</genre>
+    <publisher>Prentice Hall</publisher>
+  </filteredBook>
+  <filteredBook author="Mark Lutz" year="2010" price="45.00">
+    <title lang="en">Programming Python</title>
+    <genre>Technology</genre>
+    <publisher>O'Reilly Media</publisher>
+  </filteredBook>
+</filteredBookstore>

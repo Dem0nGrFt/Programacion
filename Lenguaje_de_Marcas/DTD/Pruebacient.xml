@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rede SYSTEM "dtdcient.dtd">
+<rede>
+  <cientifico ide="C1">
+    <nome>Maria Sánchez</nome>
+    <colaboradores>
+      <colaborador idref="C2"/>
+      <colaborador idref="C3"/>
+    </colaboradores>
+  </cientifico>
+
+  <cientifico ide="C2">
+    <nome>Juan López</nome>
+    <colaboradores>
+      <colaborador idref="C1"/>
+      <colaborador idref="C3"/>
+    </colaboradores>
+  </cientifico>
+
+  <cientifico ide="C3">
+    <nome>Ana Fernández</nome>
+    <colaboradores>
+      <colaborador idref="C1"/>
+      <colaborador idref="C2"/>
+    </colaboradores>
+  </cientifico>
+</rede>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedido numero="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd1.xsd">
+        <codigo>01</codigo>
+        <cantidad>10</cantidad>
+        <cantidad>20</cantidad>
+        <peso>5g</peso>
+</pedido>

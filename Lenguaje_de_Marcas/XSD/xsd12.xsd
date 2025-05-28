@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definición de tipos complejos reutilizables para sala y taller -->
+    <xs:group name="lugarGroup">
+        <xs:sequence>
+            <xs:element name="codigo" type="xs:int" />
+            <xs:element name="lugar" type="xs:string" />
+            <xs:element name="numServidores" type="xs:int" minOccurs="0" />
+            <xs:element name="numOrdenadores" minOccurs="0">
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:minExclusive value="20" />
+                        <xs:maxInclusive value="40" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:group>
+
+    <!-- Definición de elementos principales -->
+    <xs:element name="ordenadores">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sistemaoperativo" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:simpleContent>
+                            <xs:extension base="xs:string">
+                                <xs:attribute name="codigo" type="xs:string" use="required" />
+                            </xs:extension>
+                        </xs:simpleContent>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="taller">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:group ref="lugarGroup" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="sala" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:group ref="lugarGroup" />
+                        </xs:sequence>
+                        <xs:attribute name="impresora" type="xs:boolean" use="required" />
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="ordenador">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="sistemaoperativo">
+                                <xs:complexType>
+                                    <xs:attribute name="codigo" type="xs:string" use="required" />
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="numero" use="required">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:string">
+                                    <xs:pattern value="200\.300\.[0-9]{1,3}" />
+                                </xs:restriction>
+                            </xs:simpleType>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

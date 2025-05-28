@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="libreria.xsl"?>
+<bookstore>
+    <book>
+        <title lang="en">Learning XML</title>
+        <author>Erik T. Ray</author>
+        <year>2003</year>
+        <price>39.95</price>
+        <genre>Technology</genre>
+        <publisher>O'Reilly Media</publisher>
+    </book>
+    <book>
+        <title lang="en">Programming Python</title>
+        <author>Mark Lutz</author>
+        <year>2010</year>
+        <price>45.00</price>
+        <genre>Technology</genre>
+        <publisher>O'Reilly Media</publisher>
+    </book>
+    <book>
+        <title lang="es">Aprendiendo XML</title>
+        <author>Erik T. Ray</author>
+        <year>2003</year>
+        <price>39.95</price>
+        <genre>Technology</genre>
+        <publisher>O'Reilly Media</publisher>
+    </book>
+    <book>
+        <title lang="es">Programando en Python</title>
+        <author>Mark Lutz</author>
+        <year>2010</year>
+        <price>45.00</price>
+        <genre>Technology</genre>
+        <publisher>O'Reilly Media</publisher>
+    </book>
+    <book>
+        <title lang="en">Effective Java</title>
+        <author>Joshua Bloch</author>
+        <year>2008</year>
+        <price>55.00</price>
+        <genre>Technology</genre>
+        <publisher>Addison-Wesley</publisher>
+    </book>
+    <book>
+        <title lang="en">Clean Code</title>
+        <author>Robert C. Martin</author>
+        <year>2008</year>
+        <price>49.99</price>
+        <genre>Technology</genre>
+        <publisher>Prentice Hall</publisher>
+    </book>
+    <book>
+        <title lang="en">The Pragmatic Programmer</title>
+        <author>Andrew Hunt</author>
+        <year>1999</year>
+        <price>42.95</price>
+        <genre>Technology</genre>
+        <publisher>Addison-Wesley</publisher>
+    </book>
+</bookstore>

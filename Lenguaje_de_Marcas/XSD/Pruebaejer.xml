@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumno dni="12345678H" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation="xsdejer.xsd">
+    <nombre>Patica</nombre>
+    <direccion>
+        <calle>su casa</calle>
+        <numero>21</numero>
+        <ciudad>Ponte</ciudad>
+        <provincia>Sanxenxo</provincia>
+    </direccion>
+    <telefono>67482946</telefono>
+    <telefono>60194546</telefono>
+    <telefono>65719346</telefono>
+    <telefono>91282946</telefono>
+    <telefono>73982946</telefono>
+</alumno>

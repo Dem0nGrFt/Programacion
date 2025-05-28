@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Camiseta</title>
+</head>
+<body>
+
+    <h2>Indica los datos de la camiseta que te enviaremos</h2>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Datos de la camiseta</legend>
+
+            <label for="talla">Introduce la talla:</label>
+            <select id="talla" name="talla">
+                <script>
+                    for (let i = 36; i <= 50; i += 2) {
+                        document.write(`<option value="${i}">${i}</option>`);
+                    }
+                </script>
+            </select>
+            <br><br>
+
+            <label for="largo">Introduce los cm. de largo que deseas:</label>
+            <input type="range" id="largo" name="largo" min="30" max="100" step="2" value="50" 
+                   oninput="document.getElementById('valorLargo').textContent = this.value + ' cm de largo'">
+            <span id="valorLargo">50 cm de largo</span>
+            <br><br>
+
+            <label for="color">Selecciona un color:</label>
+            <input type="color" id="color" name="color">
+            <br><br>
+
+            <label for="fecha">Indica la fecha de nacimiento para un sorteo:</label>
+            <input type="date" id="fecha" name="fecha">
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos de envío a Galicia</legend>
+
+            <label for="provincia">Selecciona la provincia gallega:</label>
+            <select id="provincia" name="provincia">
+                <option value="A Coruña">A Coruña</option>
+                <option value="Lugo">Lugo</option>
+                <option value="Ourense">Ourense</option>
+                <option value="Pontevedra">Pontevedra</option>
+            </select>
+            <br><br>
+
+            <label for="direccion">Introduce la dirección completa:</label>
+            <textarea id="direccion" name="direccion" rows="3"></textarea>
+            <br><br>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono">
+            <br><br>
+
+            <label for="web">Blog/Web:</label>
+            <input type="url" id="web" name="web">
+            <br><br>
+
+            <label for="correo">Dirección de correo electrónico:</label>
+            <input type="email" id="correo" name="correo">
+            <br><br>
+
+            <label for="semana">Introduce la semana en la que quiere recibir la camiseta:</label>
+            <input type="week" id="semana" name="semana">
+            <br><br>
+
+            <label for="hora">Introduce una hora que esté en casa para recibir el envío:</label>
+            <input type="time" id="hora" name="hora" value="13:00">
+        </fieldset>
+
+        <br>
+        <input type="submit" value="Enviar/Validar">
+    </form>
+
+</body>
+</html>

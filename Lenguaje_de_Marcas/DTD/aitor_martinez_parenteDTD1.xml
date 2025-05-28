@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE factura SYSTEM "aitor_martinez_parenteDTD1.dtd">
+<factura id="F00003401" fecha="01/01/19">
+    <cliente>
+        <nombre>John Smith</nombre>
+        <email>jh@email.com</email>
+    </cliente>
+    <lineafactura>
+        <producto>Document 1</producto>
+        <cantidad>1</cantidad>
+        <precio>100</precio>
+        <total>100</total>
+    </lineafactura>
+    <lineafactura>
+        <producto>Document 2</producto>
+        <cantidad>1</cantidad>
+        <precio>50</precio>
+        <total>50</total>
+    </lineafactura>
+    <lineafactura>
+        <producto>Document 3</producto>
+        <cantidad>2</cantidad>
+        <precio>50</precio>
+        <total>100</total>
+    </lineafactura>
+    <lineafactura>
+        <producto>Document 4</producto>
+        <cantidad>1</cantidad>
+        <precio>100</precio>
+        <total>100</total>
+    </lineafactura>
+</factura>

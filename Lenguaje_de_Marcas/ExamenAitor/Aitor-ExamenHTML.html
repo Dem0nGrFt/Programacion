@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen HTML</title>
+</head>
+
+<body>
+    <h1>Pedido de pizza</h1>
+    <nav>
+        <a href="#personalizacion">Personalización</a>
+        <a href="#datos">Datos entrega</a>
+        <a href="#claves">Claves entrega</a>
+        <a href="#info">Otra información</a> <a href="#pago">Método pago</a>
+        <a href="#enviar">Enviar</a>
+    </nav>
+    <form>
+        <fieldset id="personalizacion">
+            <legend>
+                <h2>Pizza napolitana - Personalización</h2>
+            </legend>
+            <table>
+                <tr>
+                    <td>
+                        <p>Selecciona los ingredientes extra...</p>
+                    </td>
+                </tr>
+                <td>
+                    <input type="checkbox" name="ingredientes" value="1" />
+                    Queso<br />
+                    <input type="checkbox" name="ingredientes" value="2" />
+                    Pimiento<br />
+                    <input type="checkbox" name="ingredientes" value="3" />
+                    Cebolla<br />
+                </td>
+            </table>
+            <table>
+                <tr>
+                    <td>
+                        <p>Elige el tamaño...</p>
+                    </td>
+                </tr>
+                <td>
+                    <input type="radio" name="tamaño" value="1" />
+                    Pequeña<br />
+                    <input type="radio" name="tamaño" value="2" />
+                    Mediana<br />
+                    <input type="radio" name="tamaño" value="3" />
+                    Grande
+                </td>
+            </table>
+        </fieldset>
+        <fieldset id="datos">
+            <legend>
+                <h2>Datos de entrega</h2>
+            </legend>
+            <ul>
+                <li>
+                    <label for="nombre">Nombre*:</label>
+                    <input type="text" id="nombre" name="nombre" required autofocus tabindex="1" />
+                </li><br />
+                <li>
+                    <label for="direccion">Dirección*:</label>
+                    <input type="text" id="direccion" name="direccion" required tabindex="2" />
+                </li><br />
+                <li>
+                    <label for="telefono">Teléfono*:</label>
+                    <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" placeholder="000000000" required
+                        tabindex="3" size="9" onfocus="this.placeholder=''" onblur="this.placeholder='000000000'" />
+                </li><br />
+                <li>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="nombre@dominio.com" tabindex="4"
+                        onfocus="this.placeholder=''" onblur="this.placeholder='nombre@dominio.com'" />
+                </li><br />
+                <li>
+                    <label for="hora">Elija una hora preferente de entrega*:</label>
+                    <select id="hora" name="hora" tabindex="5">
+                        <option value="1">13:00</option>
+                        <option value="2">14:00</option>
+                        <option value="3">15:00</option>
+                    </select>
+                </li><br />
+                <li>
+                    <label for="colorCaja">Introduce el color que deseas de la caja:</label>
+                    <input type="color" id="colorCaja" name="colorCaja" value="#0f5bff" tabindex="6" disabled />
+                </li><br />
+                <li>
+                    <label for="instrucciones">Instrucciones especiales:</label><br />
+                    <textarea id="instrucciones" name="instrucciones" tabindex="7"></textarea>
+                </li>
+            </ul>
+        </fieldset>
+        <fieldset id="claves">
+            <legend>
+                <h2>Claves de entrega</h2>
+            </legend>
+
+            <br>
+            <label for="codigo">Introduce el código para garantizar la entrega:</label></br></br>
+            <label>(1 numero seguido 3 letras)*</label>
+            <input type="text" id="codigo" name="codigo" tabindex="8" required pattern="[0-9][A-Z]{3}" maxlength="4"
+                size="4" placeholder="0AAA"
+                onfocus="this.title='Introduzca un dígito seguido de tres letras mayúsculas'" />
+
+        </fieldset>
+        <fieldset id="info">
+            <legend>
+                <h2>Otra información</h2>
+            </legend>
+
+            <label for="fecha">Introduzca su fecha de nacimiento:</label>
+            <input type="date" id="fecha" name="fecha" tabindex="9" />
+            <br />
+            <label>(El dia de su aniversario tendra una pizza gratis)</label><br /><br />
+
+            <label for="archivo">Sube una foto</label>
+            <input type="file" id="archivo" name="archivo" tabindex="10" />
+            <br />
+        </fieldset>
+        <fieldset id="pago">
+            <legend>
+                <h2>Método de pago</h2>
+            </legend>
+            Elija el método de pago*:
+            <select id="metodoPago" name="metodoPago" required tabindex="11">
+                <option value="1">Efectivo</option>
+                <option value="2" selected>VISA</option>
+                <option value="3">Bizum</option>
+            </select>
+            <br />
+
+        </fieldset>
+        <input id="enviar" type="submit" value="Hacer pedido" tabindex="12" />
+    </form>
+    <footer style="text-align:center">
+        <p>2025 Examen de HTML. 1ºDAW. IES Pazo da Merce</p>
+    </footer>
+</body>
+
+</html>

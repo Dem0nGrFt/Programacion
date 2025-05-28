@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pedidos SYSTEM "dtd4.dtd">
+<pedidos>
+    <pedido>
+        <codigo>01</codigo>
+        <cantidad>10</cantidad>
+        <peso>5g</peso>
+    </pedido>
+    <pedido>
+        <codigo>02</codigo>
+        <cantidad>9</cantidad>
+    </pedido>
+    <pedido>
+        <codigo>03</codigo>
+        <cantidad>2</cantidad>
+        <peso>33.47Kg</peso>
+    </pedido>
+</pedidos>

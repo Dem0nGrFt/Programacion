@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumno ID="A1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="xsd2.xsd">
+    <codigo>01</codigo>
+    <nome>Ramon</nome>
+    <idade>36</idade>
+    <altura>1.78</altura>
+    <dataNac>2004-10-09</dataNac>
+    <conduce>false</conduce>
+    <hora_llegada>12:30:00</hora_llegada>
+    <metadata creador="Aitor" modificado="2024-11-18"/>
+</alumno>

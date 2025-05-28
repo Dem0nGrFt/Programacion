@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: serif;
+    margin: 0;
+    background-color: #f5f0e1;
+}
+
+h1 {
+    text-align: center;
+    font-family: serif;
+    color: black;
+}
+
+#menu {
+    font-family: Arial;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#menu ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+#menu a {
+    padding: 10px 20px;
+    background-color: #dedcd4;
+    text-align: center;
+}
+
+#menu a:link,
+#menu a:visited {
+    color: #6c0909;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    background-color: #980c0c;
+    color: #ffffff;
+}
+
+#tituloProv {
+    text-align: center;
+    font-family: serif;
+    color: black;
+    margin: 30px 0 20px 0;
+    font-weight: bold;
+    background-color: #f4b99e;
+    padding: 10px 0;
+    border-radius: 4px;
+}
+
+#tituloProv:hover {
+    background-color: #934c0d;
+    color: #ffffff;
+}
+
+th,
+td {
+    border: 1px solid black;
+    border-style: solid;
+    border-color: #d6cece;
+}
+
+.property-table {
+    width: 80%;
+    margin: 0 auto 40px auto;
+    border-collapse: collapse;
+    border: 1px solid #d6cece;
+}
+
+.property-table img {
+    max-width: 150px;
+    height: auto;
+}
+
+.property-table th,
+.property-table td {
+    border: 1px solid #d6cece;
+    border-width: 1px 0;
+    padding: 16px 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.property-table tr {
+    background-color: #fff7f0;
+}
+
+.property-table tr:nth-child(even) {
+    background-color: #f5f0e1;
+}
+
+.property-table th {
+    font-weight: bold;
+    background-color: #f4b99e;
+    font-size: 1.05em;
+}
+
+img {
+    margin: 12px 0;
+    border-radius: 6px;
+}
+
+#menu a.active,
+#menu a[aria-current="page"] {
+    background-color: #980c0c;
+    color: #ffffff;
+    pointer-events: none;
+    cursor: default;
+}
+
+.property-table tr:hover,
+.property-table tr:hover td,
+.property-table tr:hover th {
+    background-color: #934c0d;
+    color: #ffffff;
+}

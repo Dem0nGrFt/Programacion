@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE correos SYSTEM "dtd3.dtd">
+<correos>
+    <email>
+        <destinatario>juan.perez@example.com</destinatario>
+        <asunto>Reunión de traballo</asunto>
+        <corpo>Ola Juan, só quería confirmar a reunión de mañá ás 10 am. Saúdos, Ana.</corpo>
+    </email>
+    <email>
+        <destinatario>maria.gomez@example.com</destinatario>
+        <asunto>Feliz Cumpleanos!</asunto>
+        <corpo>Querida María, deséxoche un feliz cumpreanos! Que teñas un día marabilloso.</corpo>
+    </email>
+</correos>

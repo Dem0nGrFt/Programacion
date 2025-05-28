@@ -1,0 +1,14 @@
+<!ELEMENT factura (cliente, lineafactura+)>
+<!ATTLIST factura 
+          id ID #REQUIRED
+          fecha CDATA #REQUIRED>
+
+<!ELEMENT cliente (nombre, email?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!ELEMENT lineafactura (producto, cantidad, precio, total)>
+<!ELEMENT producto (#PCDATA)>
+<!ELEMENT cantidad (#PCDATA)>
+<!ELEMENT precio (#PCDATA)>
+<!ELEMENT total (#PCDATA)>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd7.xsd">
+  <alumno ies="IES Ejemplo">
+    <nombre>Juan Pérez</nombre>
+    <edad>18</edad>
+    <direccion>
+      <calle>Calle Ficticia 123</calle>
+      <ciudad>Madrid</ciudad>
+    </direccion>
+    <direccion>
+      <calle>Avenida Central 456</calle>
+      <ciudad>Barcelona</ciudad>
+    </direccion>
+    <telefono>612345678</telefono>
+    <telefono>612345679</telefono>
+  </alumno>
+
+  <alumno ies="IES Innovación">
+    <nombre>Ana López</nombre>
+    <edad>19</edad>
+    <direccion>
+      <calle>Calle Real 789</calle>
+      <ciudad>Sevilla</ciudad>
+    </direccion>
+    <telefono>612987654</telefono>
+  </alumno>
+
+</alumnos>

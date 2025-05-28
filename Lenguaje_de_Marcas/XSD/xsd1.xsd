@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="pedido">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="codigo" type="xs:string">
+                    <xs:annotation>
+                        <xs:documentation> El codigo debe ser unico </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element name="cantidad" type="xs:string" minOccurs="1" maxOccurs="2"/>
+                <xs:element name="peso" type="xs:string" />
+            </xs:sequence>
+            <xs:attribute name="numero" type="xs:string" />
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

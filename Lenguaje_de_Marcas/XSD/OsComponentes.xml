@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listacomponentes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:noNamespaceSchemaLocation="OsComponentes.xsd">
+    <componente codigo1="ABC456" codigo="ABC123">
+        <tarjetagrafica>
+            <memoria unidad="GB">2</memoria>
+            <precio moneda="EURO">190.00</precio>
+        </tarjetagrafica>
+    </componente>
+    <componente codigo1="DEF123" codigo="DEF456">
+        <monitor>
+            <tamaño>15</tamaño>
+            <precio moneda="DÓLAR">140.00</precio>
+        </monitor>
+    </componente>
+</listacomponentes>

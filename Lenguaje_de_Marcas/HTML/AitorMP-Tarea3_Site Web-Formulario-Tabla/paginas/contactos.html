@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../assets/styles/contactos.css">
+    <script>
+        function mostrarVale() {
+            alert("Vale de oferta para la primera compra realizada en la web");
+        }
+    </script>
+</head>
+
+<body>
+
+    <header id="header">
+        <nav id="menu">
+            <ul>
+                <li><a href="../index.html">Presentación</a></li>
+                <li><a href="turismo.html">Turismo en Galicia</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form action="mailto:registro@dominio.com" method="post">
+        <fieldset>
+            <legend>Formulario de registro</legend>
+
+            Nombre* <input type="text" name="nombre" id="nombre" required> <br><br>
+            Apellidos* <input type="text" name="apellidos" id="apellidos" required> <br><br>
+            Contraseña* <input type="password" name="contraseña" id="contraseña" required> <br><br>
+
+            <label>Temas de interés:</label><br>
+            <input type="checkbox" name="temas" value="cultura"> Cultura<br>
+            <input type="checkbox" name="temas" value="deportes"> Deportes<br>
+            <input type="checkbox" name="temas" value="ciencia"> Ciencia<br>
+            <input type="checkbox" name="temas" value="tecnologia"> Tecnología<br>
+            <input type="checkbox" name="temas" value="otros"> Otros<br><br>
+
+            <label>¿Cómo conoció la Web?</label><br>
+            <input type="radio" name="origen" value="amigos" required> Amig@s<br>
+            <input type="radio" name="origen" value="prensa"> Prensa<br>
+            <input type="radio" name="origen" value="redes"> Redes sociales<br>
+            <input type="radio" name="origen" value="tv"> Televisión<br>
+            <input type="radio" name="origen" value="radio"> Radio<br><br>
+
+            <label for="foto">Sube una forto de perfil (PNG o JPG)</label><br>
+                <input type="file" name="foto" value="foto" accept=".png, .jpg" required><br><br>
+
+            <label for="comentario">Comentario:</label><br>
+                <textarea name="comentario" id="comentario" rows="4" cols="50">Introduzca sus comentarios</textarea><br><br>
+            
+            <label for="provincia">Provincia:</label><br>
+            <select name="provincia" id="provincia" required>
+                <option value="" selected>Seleccione la provincia</option>
+                <option value="madrid">Madrid</option>
+                <option value="galicia">Galicia</option>
+                <option value="andalucía">Andalucía</option>
+                <option value="valencia">Valencia</option>
+            </select><br><br>
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Borrar</button><br><br>
+
+            <button type="button" onclick="mostrarVale()">Obtener vale de oferta</button>
+
+            </table>
+        </fieldset>
+
+
+    </form>
+
+</body>
+
+</html>

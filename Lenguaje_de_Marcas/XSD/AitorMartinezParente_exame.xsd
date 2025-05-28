@@ -1,0 +1,85 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name ="recetas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="receta" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre">
+                                <xs:simpleType>
+                                    <xs:restriction base ="xs:string">
+                                        <xs:minLength value="2"/>
+                                        <xs:maxLength value="50"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <xs:element name="ingredientes">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="ingrediente" maxOccurs="unbounded">
+                                            <xs:complexType>
+                                                <xs:simpleContent>
+                                                    <xs:extension base="xs:string">
+                                                        <xs:attribute name="cantidad" type="xs:decimal" use="required"/>
+                                                        <xs:attribute name="unidades">
+                                                            <xs:simpleType>
+                                                                <xs:restriction base="xs:string">
+                                                                    <xs:enumeration value="gramos"/>
+                                                                    <xs:enumeration value="botes"/>
+                                                                    <xs:enumeration value="vasos"/>
+                                                                    <xs:enumeration value="tazas"/>
+                                                                    <xs:enumeration value="cucharadas"/>
+                                                                    <xs:enumeration value="cucharaditas"/>
+                                                                    <xs:enumeration value="pizcas"/>
+                                                                </xs:restriction>
+                                                            </xs:simpleType>
+                                                        </xs:attribute>
+                                                    </xs:extension>
+                                                </xs:simpleContent>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute name="raciones" type="xs:positiveInteger" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="realizacion">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="paso" maxOccurs="unbounded" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="tiempoRealizacion">
+                            <xs:simpleType>
+                                <xs:restriction base="xs:integer">
+                                    <xs:minInclusive value="5"/>
+                                    <xs:maxInclusive value="360"/>
+                                </xs:restriction>
+                            </xs:simpleType>
+                            <xs:attribute name="codigo" type="codigoType" use="required"/>
+                        </xs:attribute>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="realizadas">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="receta" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:attribute name="codigo" type="xs:IDREF" use="required"/> 
+                                        <xs:attribute name="fecha" type="xs:date" use="optional">
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

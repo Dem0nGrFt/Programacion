@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="bookstore.xsl"?>
+<bookstore>
+    <book>
+        <title lang="en">Learning XML</title>
+        <author>Erik T. Ray</author>
+        <year>2003</year>
+        <price>39.95</price>
+    </book>
+    <book>
+        <title lang="en">Programming Python</title>
+        <author>Mark Lutz</author>
+        <year>2010</year>
+        <price>45.00</price>
+    </book>
+    <book>
+        <title lang="es">Aprendiendo XML</title>
+        <author>Erik T. Ray</author>
+        <year>2003</year>
+        <price>39.95</price>
+    </book>
+    <book>
+        <title lang="es">Programando en Python</title>
+        <author>Mark Lutz</author>
+        <year>2010</year>
+        <price>45.00</price>
+    </book>
+</bookstore>

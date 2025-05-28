@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="idade">
+        <xs:simpleType>
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="18" />
+                <xs:maxInclusive value="67" />
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:simpleType name="blancos">
+        <xs:restriction base="xs:string">
+            <xs:whiteSpace value="collapse" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoAltura">
+        <xs:restriction base="xs:double">
+            <xs:minInclusive value="1.20"/>
+            <xs:maxInclusive value="2.50"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="maxCaracteres">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="14"/>
+            <xs:pattern value="[A-Za-z]"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="parrafoPermitido">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="no se"/>
+                <xs:enumeration value="que"/>
+                <xs:enumeration value="poner"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="altura" type="tipoAltura" />
+    <xs:element name="dataNac" type="xs:date" />
+
+    <xs:element name="codigo">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xs:int">
+                    <xs:attribute name="ISBN" />
+                    <xs:attribute name="Alpha" />
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="metadata">
+        <xs:complexType>
+            <xs:attribute name="creador" type="xs:string" use="required" />
+            <xs:attribute name="modificado" type="xs:date" />
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="alumno">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="codigo" />
+                <xs:element name="nome" type="xs:string" minOccurs="1" maxOccurs="2">
+                    <xs:annotation>
+                        <xs:appinfo>
+                            <xs:maxLength value="40" />
+                        </xs:appinfo>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element ref="idade" />
+                <xs:element ref="altura" />
+                <xs:element ref="dataNac" />
+                <xs:element name="conduce" type="xs:boolean" />
+                <xs:element name="hora_llegada" type="xs:time" />
+                <xs:element ref="metadata" />
+            </xs:sequence>
+            <xs:attribute name="ID" type="xs:ID" use="required"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

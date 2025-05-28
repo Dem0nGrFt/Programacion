@@ -1,0 +1,18 @@
+<cv>
+    <presentacion>Me llamo Juan y soy ingeniero de software con 5 años de experiencia.</presentacion>
+    
+    <!-- datos_academicos o experiencia_laboral deben aparecer al menos una vez -->
+    <datos_academicos>Licenciado en Ingeniería Informática por la Universidad de Madrid.</datos_academicos>
+    <experiencia_laboral>Desarrollador en XYZ Corp desde 2019.</experiencia_laboral>
+    <experiencia_laboral>Analista de sistemas en ABC Corp de 2017 a 2019.</experiencia_laboral>
+  
+    <!-- lectura, deportes y otros pueden aparecer cero o más veces -->
+    <lectura>Lectura de novelas de ciencia ficción.</lectura>
+    <deportes>Fútbol y senderismo.</deportes>
+    <otros>Voluntariado en organizaciones benéficas.</otros>
+    
+    <!-- referencias puede aparecer cero o más veces -->
+    <referencias>Referencia de mi anterior jefe en XYZ Corp.</referencias>
+    <referencias>Referencia de mi tutor académico en la Universidad de Madrid.</referencias>
+  </cv>
+  

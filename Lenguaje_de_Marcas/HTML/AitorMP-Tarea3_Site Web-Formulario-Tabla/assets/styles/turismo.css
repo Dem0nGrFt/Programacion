@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f5f0e1;
+}
+
+#menu {
+    font-family: Arial;
+    text-align: center;
+    /* Centrar el menú */
+    margin-bottom: 10px;
+
+
+    margin-top: 20px;
+}
+
+#menu ul {
+    list-style-type: none;
+    /* Eliminar puntos de la lista */
+    display: flex;
+    /* Convertir el ul en un contenedor flex */
+    justify-content: center;
+    /*Determina la disposición de elementos Flex */
+}
+
+#menu a {
+    padding: 10px 20px;
+    background-color: #dedcd4;
+    text-align: center;
+}
+
+#menu a:link,
+#menu a:visited {
+    color: #6c0909;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    background-color: #980c0c;
+    color: #ffffff;
+}
+
+h1 {
+    text-align: center;
+    font-family: serif;
+    color: #4E3B31;
+}
+
+.property-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.property-table img {
+    max-width: 150px;
+    height: auto;
+}
+
+th,
+td {
+    border: 1px solid;
+    border-color: #cccccc;
+}
+
+th {
+    background-color: #d7af4a;
+    color: white;
+}
+
+.coruña {
+    background-color: #f2a900;
+}
+
+.lugo {
+    background-color: #a95c2b;
+}
+
+.ourense {
+    background-color: #e4b241;
+}
+
+.pontevedra {
+    background-color: #c97b34;
+}
+
+.property-table tr:hover {
+    background-color: darkorange;
+}
+
+.property-table td[rowspan] {
+    pointer-events: none;
+}
+
+#menu a.active,
+#menu a[aria-current="page"] {
+    background-color: #980c0c;
+    color: #ffffff;
+    pointer-events: none;
+    cursor: default;
+}

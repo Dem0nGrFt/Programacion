@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definición del tipo para tarjeta gráfica -->
+    <xs:complexType name="TarjetaGraficaType">
+        <xs:sequence>
+            <xs:element name="memoria">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="unidad" use="required">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="GB"/>
+                                        <xs:enumeration value="TB"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:attribute>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="precio">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:decimal">
+                            <xs:attribute name="moneda" use="required">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="EURO"/>
+                                        <xs:enumeration value="DÓLAR"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:attribute>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <!-- Definición del tipo para monitor -->
+    <xs:complexType name="MonitorType">
+        <xs:all>
+            <xs:element name="tamaño" type="xs:int"/>
+            <xs:element name="precio">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:decimal">
+                            <xs:attribute name="moneda" use="required">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="EURO"/>
+                                        <xs:enumeration value="DÓLAR"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:attribute>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:all>
+    </xs:complexType>
+
+    <!-- Definición del elemento componente -->
+    <xs:element name="componente">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element name="tarjetagrafica" type="TarjetaGraficaType"/>
+                <xs:element name="monitor" type="MonitorType"/>
+            </xs:choice>
+            <xs:attribute name="codigo" type="xs:string" use="required"/>
+            <xs:attribute name="codigo1" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value=".{6}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Definición del elemento raíz listacomponentes -->
+    <xs:element name="listacomponentes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="componente" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
