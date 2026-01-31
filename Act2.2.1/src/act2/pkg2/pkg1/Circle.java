@@ -21,6 +21,7 @@ public class Circle {
      */
     public static int getMAX_RADIUS() {
         return MAX_RADIUS;
+        
     }
 
     /**
